@@ -34,32 +34,36 @@
     <div id="app" class="w-full h-screen relative">
         <div v-if="current" class="slide text-white px-4 pt-8 pb-32"
             :style="{background:'linear-gradient(180deg,'+current.color+',#08111d)'}">
-            <div class="text-center">
-                <div class="text-3xl font-bold tracking-tight">{{current.name}}</div>
-                <div class="text-xs opacity-70 mt-0.5 tracking-wider uppercase">{{current.role}}</div>
-            </div>
-            <div class="flex-1 mt-4 overflow-hidden">
+            <div class="flex-1 overflow-hidden">
                 <div class="h-full flex transition-all duration-500 ease-out"
                     :style="{transform:`translateX(-${stepIndex*100}%)`}">
                     <div v-for="(step,index) in current.steps" :key="index" class="min-w-full h-full pb-2">
-                        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-5 h-full flex flex-col border border-white/10 shadow-2xl">
-                            <div class="text-center">
+                        <div
+                            class="bg-white/10 backdrop-blur-md rounded-3xl p-5 h-full flex flex-col border border-white/10 shadow-2xl">
+
+                            <div class="flex items-center justify-between">
+                                <div class="text-lg font-bold tracking-wide uppercase">
+                                    {{ step.title }}
+                                </div>
+
                                 <span class="text-xs bg-white/20 px-3 py-1 rounded-full font-semibold tracking-wide"
-                                    :class="{'animate-pulse ring-2 ring-emerald-400/50': isTimeInRange(step.time)}">
-                                    {{step.time}}
+                                    :class="{ 'animate-pulse ring-2 ring-emerald-400/50': isTimeInRange(step.time) }">
+                                    {{ step.time }}
                                 </span>
-                                <div class="text-lg font-bold tracking-wide uppercase mt-2.5">{{step.title}}</div>
                             </div>
-                            
+
                             <div class="flex-1 overflow-y-auto mt-4 pr-1 space-y-4">
-                                <div v-for="(item, i) in step.items" :key="i" class="bg-black/20 rounded-2xl p-4 border border-white/5 space-y-3.5">
+                                <div v-for="(item, i) in step.items" :key="i"
+                                    class="bg-black/20 rounded-2xl p-4 border border-white/5 space-y-3.5">
                                     <div v-if="item.actions && item.actions.length" class="space-y-1.5">
-                                        <div class="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+                                        <div
+                                            class="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider">
                                             <i class="bi bi-play-circle-fill"></i>
                                             <span>Actions</span>
                                         </div>
                                         <ul class="space-y-1 pl-1">
-                                            <li v-for="(act, ai) in item.actions" :key="ai" class="text-sm text-slate-200 flex items-start gap-2">
+                                            <li v-for="(act, ai) in item.actions" :key="ai"
+                                                class="text-sm text-slate-200 flex items-start gap-2">
                                                 <span class="text-emerald-400/70 mt-0.5">•</span>
                                                 <span>{{act}}</span>
                                             </li>
@@ -67,12 +71,14 @@
                                     </div>
 
                                     <div v-if="item.toAvoids && item.toAvoids.length" class="space-y-1.5">
-                                        <div class="flex items-center gap-2 text-rose-400 text-xs font-bold uppercase tracking-wider">
+                                        <div
+                                            class="flex items-center gap-2 text-rose-400 text-xs font-bold uppercase tracking-wider">
                                             <i class="bi bi-x-circle-fill"></i>
-                                            <span>To Avoid</span>
+                                            <span>À éviter</span>
                                         </div>
                                         <ul class="space-y-1 pl-1">
-                                            <li v-for="(avoid, av) in item.toAvoids" :key="av" class="text-sm text-slate-200 flex items-start gap-2">
+                                            <li v-for="(avoid, av) in item.toAvoids" :key="av"
+                                                class="text-sm text-slate-200 flex items-start gap-2">
                                                 <span class="text-rose-400/70 mt-0.5">•</span>
                                                 <span>{{avoid}}</span>
                                             </li>
@@ -80,12 +86,14 @@
                                     </div>
 
                                     <div v-if="item.positions && item.positions.length" class="space-y-1.5">
-                                        <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider">
+                                        <div
+                                            class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider">
                                             <i class="bi bi-geo-alt-fill"></i>
-                                            <span>Positioning</span>
+                                            <span>Positionnement</span>
                                         </div>
                                         <ul class="space-y-1 pl-1">
-                                            <li v-for="(pos, pi) in item.positions" :key="pi" class="text-sm text-slate-200 flex items-start gap-2">
+                                            <li v-for="(pos, pi) in item.positions" :key="pi"
+                                                class="text-sm text-slate-200 flex items-start gap-2">
                                                 <span class="text-amber-400/70 mt-0.5">•</span>
                                                 <span>{{pos}}</span>
                                             </li>
@@ -95,15 +103,18 @@
                             </div>
 
                             <div class="pt-4 flex justify-between items-center">
-                                <button @click="prev" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 transition-all flex items-center justify-center backdrop-blur-sm">
+                                <button @click="prev"
+                                    class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 transition-all flex items-center justify-center backdrop-blur-sm">
                                     <i class="bi bi-chevron-left text-sm"></i>
                                 </button>
                                 <div class="flex gap-1.5">
-                                    <div v-for="(s,i) in current.steps" :key="i" class="h-1.5 rounded-full transition-all duration-300"
+                                    <div v-for="(s,i) in current.steps" :key="i"
+                                        class="h-1.5 rounded-full transition-all duration-300"
                                         :class="stepIndex===i?'w-5 bg-white':'w-1.5 bg-white/30'">
                                     </div>
                                 </div>
-                                <button @click="next" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 transition-all flex items-center justify-center backdrop-blur-sm">
+                                <button @click="next"
+                                    class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 transition-all flex items-center justify-center backdrop-blur-sm">
                                     <i class="bi bi-chevron-right text-sm"></i>
                                 </button>
                             </div>
@@ -113,19 +124,25 @@
             </div>
         </div>
 
-        <div class="absolute bottom-16 left-0 right-0 flex justify-center z-40 pointer-events-none">
-            <img src="https://upload.wikimedia.org/wikipedia/id/7/72/New_Mobile_Legends_Bang_Bang_2020_Logo.png" alt="MLBB Logo" class="h-12 object-contain opacity-60 filter drop-shadow-md">
+        <div class="absolute bottom-4 left-0 right-0 flex justify-center z-40 pointer-events-none">
+            <img src="https://upload.wikimedia.org/wikipedia/id/7/72/New_Mobile_Legends_Bang_Bang_2020_Logo.png"
+                alt="MLBB Logo" class="h-12 object-contain opacity-60 filter drop-shadow-md">
         </div>
 
         <div class="absolute bottom-4 left-4 z-50">
             <div class="relative">
-                <button @click="isDropdownOpen = !isDropdownOpen" class="flex items-center gap-2 bg-slate-900/90 backdrop-blur-md border border-slate-700/50 rounded-full px-4 py-2 shadow-2xl text-white text-sm font-medium hover:bg-slate-800 transition-colors active:scale-95 duration-200">
+                <button @click="isDropdownOpen = !isDropdownOpen"
+                    class="flex items-center gap-2 bg-slate-900/90 backdrop-blur-md border border-slate-700/50 rounded-full px-4 py-2 shadow-2xl text-white text-sm font-medium hover:bg-slate-800 transition-colors active:scale-95 duration-200">
                     <i class="bi bi-person-fill text-slate-400"></i>
                     <span>{{ current ? current.name : 'Select Hero' }}</span>
-                    <i class="bi bi-chevron-up text-xs text-slate-400 ml-1 transition-transform duration-200" :class="{'rotate-180': isDropdownOpen}"></i>
+                    <i class="bi bi-chevron-up text-xs text-slate-400 ml-1 transition-transform duration-200"
+                        :class="{'rotate-180': isDropdownOpen}"></i>
                 </button>
-                <div v-if="isDropdownOpen" class="absolute bottom-full left-0 mb-2 w-48 bg-slate-900/95 backdrop-blur-md border border-slate-700/50 rounded-2xl shadow-2xl py-1.5 overflow-hidden max-h-60 overflow-y-auto">
-                    <button v-for="hero in heroes" :key="hero.name" @click="select(hero)" class="w-full text-left px-4 py-2 text-sm text-slate-200 hover:bg-white/10 transition-colors flex items-center justify-between" :class="{'bg-white/5 text-white font-medium': current?.name === hero.name}">
+                <div v-if="isDropdownOpen"
+                    class="absolute bottom-full left-0 mb-2 w-48 bg-slate-900/95 backdrop-blur-md border border-slate-700/50 rounded-2xl shadow-2xl py-1.5 overflow-hidden max-h-60 overflow-y-auto">
+                    <button v-for="hero in heroes" :key="hero.name" @click="select(hero)"
+                        class="w-full text-left px-4 py-2 text-sm text-slate-200 hover:bg-white/10 transition-colors flex items-center justify-between"
+                        :class="{'bg-white/5 text-white font-medium': current?.name === hero.name}">
                         <span>{{ hero.name }}</span>
                         <span class="w-2 h-2 rounded-full" :style="{backgroundColor: hero.color}"></span>
                     </button>
@@ -133,8 +150,10 @@
             </div>
         </div>
 
-        <div class="absolute bottom-4 right-4 z-50 flex items-center gap-2 bg-slate-900/90 backdrop-blur-md border border-slate-700/50 rounded-full py-1.5 pl-4 pr-2 shadow-2xl text-white">
-            <button @click="toggleMute" class="w-7 h-7 rounded-full flex items-center justify-center transition-colors" :class="isMuted ? 'bg-rose-500/20 text-rose-400' : 'bg-slate-800 text-slate-300'">
+        <div
+            class="absolute bottom-4 right-4 z-50 flex items-center gap-2 bg-slate-900/90 backdrop-blur-md border border-slate-700/50 rounded-full py-1.5 pl-4 pr-2 shadow-2xl text-white">
+            <button @click="toggleMute" class="w-7 h-7 rounded-full flex items-center justify-center transition-colors"
+                :class="isMuted ? 'bg-rose-500/20 text-rose-400' : 'bg-slate-800 text-slate-300'">
                 <i :class="isMuted ? 'bi bi-volume-mute-fill' : 'bi bi-volume-up-fill'"></i>
             </button>
             <div class="h-4 w-[1px] bg-slate-700"></div>
@@ -143,19 +162,24 @@
             </div>
             <div class="h-4 w-[1px] bg-slate-700 mx-1"></div>
             <div class="flex gap-1">
-                <button v-if="!isRunning && time === 0" @click="startStopwatch" class="w-7 h-7 rounded-full bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 flex items-center justify-center transition-colors">
+                <button v-if="!isRunning && time === 0" @click="startStopwatch"
+                    class="w-7 h-7 rounded-full bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 flex items-center justify-center transition-colors">
                     <i class="bi bi-play-fill text-sm"></i>
                 </button>
-                <button v-if="isRunning" @click="pauseStopwatch" class="w-7 h-7 rounded-full bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 flex items-center justify-center transition-colors">
+                <button v-if="isRunning" @click="pauseStopwatch"
+                    class="w-7 h-7 rounded-full bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 flex items-center justify-center transition-colors">
                     <i class="bi bi-pause-fill text-sm"></i>
                 </button>
-                <button v-if="!isRunning && time > 0" @click="startStopwatch" class="w-7 h-7 rounded-full bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 flex items-center justify-center transition-colors">
+                <button v-if="!isRunning && time > 0" @click="startStopwatch"
+                    class="w-7 h-7 rounded-full bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 flex items-center justify-center transition-colors">
                     <i class="bi bi-play-fill text-sm"></i>
                 </button>
-                <button v-if="time > 0" @click="resetStopwatch" class="w-7 h-7 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center transition-colors">
+                <button v-if="time > 0" @click="resetStopwatch"
+                    class="w-7 h-7 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center transition-colors">
                     <i class="bi bi-arrow-counterclockwise text-sm"></i>
                 </button>
-                <button v-if="time > 0" @click="stopStopwatch" class="w-7 h-7 rounded-full bg-rose-500/20 hover:bg-rose-500/30 text-rose-400 flex items-center justify-center transition-colors">
+                <button v-if="time > 0" @click="stopStopwatch"
+                    class="w-7 h-7 rounded-full bg-rose-500/20 hover:bg-rose-500/30 text-rose-400 flex items-center justify-center transition-colors">
                     <i class="bi bi-stop-fill text-sm"></i>
                 </button>
             </div>
@@ -276,13 +300,13 @@
                 speakCurrentStep() {
                     if (this.isMuted || !('speechSynthesis' in window)) return;
                     window.speechSynthesis.cancel();
-                    
+
                     const step = this.current.steps[this.stepIndex];
                     if (!step || !step.items || !step.items[0]) return;
-                    
+
                     const item = step.items[0];
                     let textToSpeak = `${step.title}. `;
-                    
+
                     if (item.actions && item.actions.length) {
                         textToSpeak += `Actions: ${item.actions.join('. ')}. `;
                     }
@@ -292,10 +316,23 @@
                     if (item.positions && item.positions.length) {
                         textToSpeak += `Positioning: ${item.positions.join('. ')}.`;
                     }
-                    
                     const utterance = new SpeechSynthesisUtterance(textToSpeak);
-                    utterance.rate = 1.0;
-                    window.speechSynthesis.speak(utterance);
+
+                    const voices = speechSynthesis.getVoices();
+                    const frenchVoice = voices.find(
+                        voice => voice.lang === 'fr-FR' && voice.name.includes('Google')
+                    ) || voices.find(
+                        voice => voice.lang.startsWith('fr')
+                    );
+
+                    if (frenchVoice) {
+                        utterance.voice = frenchVoice;
+                    }
+
+                    utterance.lang = 'fr-FR';
+                    // speed up
+                    utterance.rate = 1.5;
+                    speechSynthesis.speak(utterance);
                 }
             },
             beforeUnmount() {
