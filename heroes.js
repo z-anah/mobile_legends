@@ -410,175 +410,171 @@ window.heroesData = [
     {
         name: "Zilong",
         role: "EXP Lane",
-        color: "#ca8a04",
+        goal: "MVP, Maniac, Victory",
+        color: "#b8860b",
         steps: [
             {
-                time: "00:00–02:00",
-                title: "Early Laning & Preservation",
+                time: "00:00–00:20",
+                title: "Début de partie",
                 items: [
                     {
                         actions: [
-                            "Purchase Boots immediately to ensure movement speed advantage for positioning.",
-                            "Unlock Skill 2 (Spear Strike) to safely secure last-hit minion gold from a distance."
+                            "Acheter l'équipement recommandé.",
+                            "Aller immédiatement sur la EXP Lane.",
+                            "Débloquer la Compétence 2.",
+                            "Observer le héros adverse.",
+                            "Regarder la mini-carte avant l'arrivée des sbires."
                         ],
                         toAvoids: [
-                            "Avoid forcing extended trades against strong early-game lane dominant fighters.",
-                            "Do not waste your Sprint or Flicker battle spell on non-lethal early skirmishes."
+                            "Ne pas envahir la jungle ennemie seul.",
+                            "Ne pas arriver en retard sur la lane.",
+                            "Ne pas utiliser l'Ultime avant le niveau 4."
                         ],
                         positions: [
-                            "Stay close to your outer turret rim to draw minions safely into tower range.",
-                            "Freeze the lane near your bush line to mitigate exposure to early enemy mid ganks."
+                            "Rester derrière les premiers sbires.",
+                            "Se placer près de la tour au début."
                         ]
                     }
                 ]
             },
             {
-                time: "02:00–07:00",
-                title: "Item Power Spike & Split Pushing",
+                time: "00:20–01:30",
+                title: "Premier niveau",
                 items: [
                     {
                         actions: [
-                            "Rush Great Dragon Spear and Windtalker to scale critical strike chance and physical attack speed.",
-                            "Use Skill 1 (Spear Flip) under your own tower if the enemy hero overextends while harassing."
+                            "Faire le dernier coup sur tous les sbires.",
+                            "Échanger des dégâts seulement si l'ennemi utilise ses compétences.",
+                            "Débloquer la Compétence 1 au niveau 2.",
+                            "Conserver un maximum de points de vie."
                         ],
                         toAvoids: [
-                            "Avoid joining unnecessary mid lane brawls if your lane minion wave is pushing back toward your tower.",
-                            "Do not engage the enemy team without your Ultimate (Supreme Warrior) available for escape or pursuit."
+                            "Ne pas plonger sous la tour.",
+                            "Ne pas poursuivre un ennemi.",
+                            "Ne pas gaspiller les compétences."
                         ],
                         positions: [
-                            "Focus positions in the side lanes to split push and apply constant map pressure on enemy outer turrets.",
-                            "Hide inside side lane bushes to ambush rotating squishy enemy targets or lone mages."
+                            "Au milieu de la lane.",
+                            "Reculer près de la tour si le Jungler ennemi disparaît."
                         ]
                     }
                 ]
             },
             {
-                time: "07:00–12:00",
-                title: "Mid Game Flanking & Pick-offs",
+                time: "01:30–02:30",
+                title: "Préparer la Turtle",
                 items: [
                     {
                         actions: [
-                            "Complete Berserker's Fury to drastically boost critical strike damage output.",
-                            "Pop Supreme Warrior to gain slow immunity, speed up, and burst down isolated enemy backlines."
+                            "Nettoyer rapidement la vague.",
+                            "Aider le Jungler à la Turtle si elle est proche.",
+                            "Revenir immédiatement défendre la lane.",
+                            "Observer les rotations ennemies."
                         ],
                         toAvoids: [
-                            "Avoid initiating fights directly onto full-health frontliners or tanky targets.",
-                            "Do not challenge groups of enemies alone without an established flanking path or numbers advantage."
+                            "Ne pas abandonner la lane inutilement.",
+                            "Ne pas combattre seul contre plusieurs ennemis.",
+                            "Ne pas ignorer la mini-carte."
                         ],
                         positions: [
-                            "Lurk in blind spots and jungle bushes perpendicular to the teamfight location.",
-                            "Position yourself behind the enemy line to intercept retreating low-health opponents."
+                            "Entre la EXP Lane et la rivière.",
+                            "Toujours avec une voie de retraite."
                         ]
                     }
                 ]
             },
             {
-                time: "12:00+",
-                title: "Late Game Clean-up & Maniac Execution",
+                time: "02:30–05:00",
+                title: "Dominer la EXP Lane",
                 items: [
                     {
                         actions: [
-                            "Finalize build with Blade of Despair and Haas' Claws or Immortality for maximum burst and survivability.",
-                            "Wait out major enemy crowd control cooldowns before diving into full teamfights.",
-                            "Chain Spear Strike resets upon securing kills to systematically burst down remaining targets for the Maniac."
+                            "Continuer à farmer.",
+                            "Détruire la première tour si possible.",
+                            "Profiter des erreurs de l'adversaire pour éliminer une cible.",
+                            "Commencer les rotations vers la Mid Lane."
                         ],
                         toAvoids: [
-                            "Avoid acting as the primary initiator for the team under any circumstances.",
-                            "Do not reveal your map position until the enemy core marksman or mage has committed their escape skills."
+                            "Ne pas rester sur une lane après avoir détruit la tour.",
+                            "Ne pas poursuivre un Tank.",
+                            "Ne pas oublier les objectifs."
                         ],
                         positions: [
-                            "Hover dynamically on the outskirts of the primary Lord pit or high-ground clash area.",
-                            "Angle your approach strictly toward the vulnerable enemy backline to execute instant pick-offs."
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        name: "Dyrroth",
-        role: "EXP Lane",
-        color: "#b91c1c",
-        steps: [
-            {
-                time: "00:00–02:00",
-                title: "Early Lane Dominance & Zoning",
-                items: [
-                    {
-                        actions: [
-                            "Purchase Boots to maneuver quickly during early trades.",
-                            "Unlock Skill 2 (Spectre Step) to immediately shred enemy physical defense and dominate level 1 skirmishes.",
-                            "Manage your Rage bar to ensure your skills are enhanced for maximum damage output."
-                        ],
-                        toAvoids: [
-                            "Avoid mindlessly pushing the minion wave; freeze it near your tower to deny the enemy EXP.",
-                            "Do not aggressively trade if the enemy Roamer or Jungler is missing from the map."
-                        ],
-                        positions: [
-                            "Control the lane bushes to zone the enemy fighter away from last-hitting minions.",
-                            "Position yourself to hit both the enemy hero and the minion wave with your enhanced skills."
+                            "Dans les buissons avec vision.",
+                            "Derrière les sbires avant d'engager."
                         ]
                     }
                 ]
             },
             {
-                time: "02:00–07:00",
-                title: "First Power Spike & Turtle Contests",
+                time: "05:00–08:00",
+                title: "Rotation et éliminations",
                 items: [
                     {
                         actions: [
-                            "Complete Hunter Strike for physical penetration and crucial movement speed boosts after chaining basic attacks.",
-                            "Use the Skill 2 defense reduction followed by Skill 1 (Burst Strike) to severely chunk the enemy laner.",
-                            "Rotate to the Turtle pit to zone out the enemy Jungler using your high early-game burst."
+                            "Chercher les Marksmen et Mages isolés.",
+                            "Utiliser la Compétence 1 pour projeter la cible.",
+                            "Enchaîner immédiatement avec la Compétence 2.",
+                            "Utiliser l'Ultime pour poursuivre ou fuir.",
+                            "Retourner farmer après chaque élimination."
                         ],
                         toAvoids: [
-                            "Avoid using your Ultimate (Abysm Strike) when the enemy still has their dash or Flicker available.",
-                            "Do not engage in 1v2 situations unless you have a full Rage bar and a distinct level advantage."
+                            "Ne pas engager un Tank.",
+                            "Ne pas combattre en infériorité numérique.",
+                            "Ne pas rester immobile."
                         ],
                         positions: [
-                            "Anchor in the river bushes near the Turtle to intercept enemy rotations.",
-                            "Invade the enemy's jungle perimeter if you have successfully pushed the outer EXP turret."
+                            "Contourner les combats par les côtés.",
+                            "Attaquer la Backline ennemie."
                         ]
                     }
                 ]
             },
             {
-                time: "07:00–12:00",
-                title: "Mid Game Assassination & Map Pressure",
+                time: "08:00–10:00",
+                title: "Lord",
                 items: [
                     {
                         actions: [
-                            "Build Blade of Despair and War Axe to maximize your one-shot capability against squishy targets.",
-                            "Utilize the Flicker + Ultimate combo to instantly erase enemy Mages or Marksmen before they can react."
+                            "Nettoyer la EXP Lane.",
+                            "Rejoindre immédiatement le Lord.",
+                            "Éliminer les héros fragiles qui s'approchent.",
+                            "Aider à sécuriser le Lord.",
+                            "Utiliser l'Ultime pour poursuivre les survivants."
                         ],
                         toAvoids: [
-                            "Avoid initiating 5v5 teamfights as the primary tank; you are a burst fighter, not an absorber.",
-                            "Do not waste your enhanced Spectre Step on enemy tanks if their core damage dealers are exposed."
+                            "Ne pas commencer Lord seul.",
+                            "Ne pas mourir avant l'objectif.",
+                            "Ne pas ignorer les Assassins ennemis."
                         ],
                         positions: [
-                            "Flank from the side lanes or enemy jungle during major objective standoffs.",
-                            "Lurk in high-traffic mid lane bushes to catch rotating enemy cores off guard."
+                            "Sur le côté du combat.",
+                            "Derrière le Tank avant d'entrer."
                         ]
                     }
                 ]
             },
             {
-                time: "12:00+",
-                title: "Late Game Flanking & Maniac Sweep",
+                time: "10:00–Fin",
+                title: "Fin de partie",
                 items: [
                     {
                         actions: [
-                            "Finalize your build with defensive items like Dominance Ice and Immortality to survive late-game burst.",
-                            "Wait for your team's Roamer to absorb key crowd control skills before entering the fray.",
-                            "Target the backline explicitly; chaining kills on squishies with your cooldown reductions leads to Maniac setups."
+                            "Chercher les héros isolés.",
+                            "Éliminer rapidement le Marksman ennemi.",
+                            "Pousser les tours après chaque victoire.",
+                            "Utiliser l'Ultime pour rejoindre rapidement un combat.",
+                            "Détruire le Nexus dès que possible."
                         ],
                         toAvoids: [
-                            "Avoid fighting in tight choke points where your Ultimate can be easily interrupted by area-of-effect CC.",
-                            "Do not reveal yourself on the minimap prior to the teamfight erupting."
+                            "Ne pas courir après un Tank.",
+                            "Ne pas Split Push sans vision.",
+                            "Ne pas quitter l'équipe avant le Lord."
                         ],
                         positions: [
-                            "Position dynamically on the absolute edge of the teamfight, remaining unseen until the moment of engagement.",
-                            "Dive directly onto the enemy backline via a flank, bypassing the heavily armored frontliners completely."
+                            "Contourner la Frontline.",
+                            "Entrer par les côtés.",
+                            "Viser directement la Backline."
                         ]
                     }
                 ]

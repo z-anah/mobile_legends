@@ -311,10 +311,10 @@
                         textToSpeak += `Actions: ${item.actions.join('. ')}. `;
                     }
                     if (item.toAvoids && item.toAvoids.length) {
-                        textToSpeak += `To Avoid: ${item.toAvoids.join('. ')}. `;
+                        textToSpeak += `A éviter: ${item.toAvoids.join('. ')}. `;
                     }
                     if (item.positions && item.positions.length) {
-                        textToSpeak += `Positioning: ${item.positions.join('. ')}.`;
+                        textToSpeak += `Positionnement: ${item.positions.join('. ')}.`;
                     }
                     const utterance = new SpeechSynthesisUtterance(textToSpeak);
 
@@ -330,7 +330,6 @@
                     }
 
                     utterance.lang = 'fr-FR';
-                    // speed up
                     utterance.rate = 1.5;
                     speechSynthesis.speak(utterance);
                 }
