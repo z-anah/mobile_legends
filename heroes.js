@@ -757,186 +757,312 @@ window.heroesData = [
             }
         ]
     },
-  {
-    name: "Belerick",
-    role: "Tank Roaming",
-    goal: "MVP, Maniac, Victory",
-    color: "#2e7d32",
-    steps: [
-      {
-        time: "00:00–00:20",
-        title: "Début de partie",
-        items: [
-          {
-            actions: [
-              "Acheter les bottes de Roaming.",
-              "Débloquer la Compétence 2.",
-              "Accompagner immédiatement le Jungler.",
-              "Vérifier les entrées de la jungle.",
-              "Regarder constamment la mini-carte."
-            ],
-            toAvoids: [
-              "Ne pas prendre les sbires.",
-              "Ne pas prendre les buffs du Jungler.",
-              "Ne pas partir seul dans la jungle ennemie."
-            ],
-            positions: [
-              "Devant le Jungler.",
-              "Dans le buisson proche du premier buff.",
-              "Entre les alliés et les ennemis."
-            ]
-          }
+    {
+        name: "Belerick",
+        role: "Tank Roaming",
+        goal: "MVP, Maniac, Victory",
+        color: "#2e7d32",
+        steps: [
+            {
+                time: "00:00–00:20",
+                title: "Début de partie",
+                items: [
+                    {
+                        actions: [
+                            "Acheter les bottes de Roaming.",
+                            "Débloquer la Compétence 2.",
+                            "Accompagner immédiatement le Jungler.",
+                            "Vérifier les entrées de la jungle.",
+                            "Regarder constamment la mini-carte."
+                        ],
+                        toAvoids: [
+                            "Ne pas prendre les sbires.",
+                            "Ne pas prendre les buffs du Jungler.",
+                            "Ne pas partir seul dans la jungle ennemie."
+                        ],
+                        positions: [
+                            "Devant le Jungler.",
+                            "Dans le buisson proche du premier buff.",
+                            "Entre les alliés et les ennemis."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "00:20–01:30",
+                title: "Protection du Jungler",
+                items: [
+                    {
+                        actions: [
+                            "Aider à sécuriser le premier buff.",
+                            "Contrôler les buissons.",
+                            "Donner la vision autour de la rivière.",
+                            "Aider le Mid Lane après le premier buff."
+                        ],
+                        toAvoids: [
+                            "Ne pas quitter le Jungler trop tôt.",
+                            "Ne pas poursuivre un ennemi.",
+                            "Ne pas gaspiller les compétences."
+                        ],
+                        positions: [
+                            "Toujours devant les alliés.",
+                            "Dans les buissons importants.",
+                            "À l'entrée de la rivière."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "01:30–02:30",
+                title: "Première Turtle",
+                items: [
+                    {
+                        actions: [
+                            "Donner la vision autour de la Turtle.",
+                            "Bloquer les ennemis qui approchent.",
+                            "Utiliser la Compétence 2 pour attirer les ennemis.",
+                            "Protéger le Jungler jusqu'à la fin de l'objectif."
+                        ],
+                        toAvoids: [
+                            "Ne pas attaquer la Turtle à la place du Jungler.",
+                            "Ne pas quitter la zone.",
+                            "Ne pas poursuivre les ennemis loin."
+                        ],
+                        positions: [
+                            "Entre les ennemis et le Jungler.",
+                            "Dans les buissons proches de la Turtle.",
+                            "Devant toute l'équipe."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "02:30–05:00",
+                title: "Rotation",
+                items: [
+                    {
+                        actions: [
+                            "Alterner entre Gold Lane et Mid Lane.",
+                            "Protéger le Marksman pendant son farm.",
+                            "Donner la vision avant chaque rotation.",
+                            "Créer des opportunités de gank."
+                        ],
+                        toAvoids: [
+                            "Ne pas rester longtemps sur une seule lane.",
+                            "Ne pas voler les éliminations.",
+                            "Ne pas oublier les objectifs."
+                        ],
+                        positions: [
+                            "Toujours devant le Marksman.",
+                            "Dans les buissons avant les alliés.",
+                            "Entre les ennemis et les héros fragiles."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "05:00–08:00",
+                title: "Team Fight",
+                items: [
+                    {
+                        actions: [
+                            "Engager le combat avec l'Ultime.",
+                            "Immobiliser plusieurs ennemis.",
+                            "Protéger le Marksman et le Mage.",
+                            "Absorber le maximum de dégâts.",
+                            "Utiliser la Compétence 2 dès qu'elle est disponible."
+                        ],
+                        toAvoids: [
+                            "Ne pas poursuivre un ennemi faible.",
+                            "Ne pas abandonner la Backline.",
+                            "Ne pas utiliser l'Ultime sur une seule cible sans raison."
+                        ],
+                        positions: [
+                            "Première ligne.",
+                            "Au centre du combat.",
+                            "Toujours devant les alliés."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "08:00–10:00",
+                title: "Lord",
+                items: [
+                    {
+                        actions: [
+                            "Contrôler tous les buissons autour du Lord.",
+                            "Empêcher le Jungler ennemi d'approcher.",
+                            "Protéger le Jungler allié.",
+                            "Engager uniquement si l'équipe est prête.",
+                            "Utiliser l'Ultime sur plusieurs ennemis."
+                        ],
+                        toAvoids: [
+                            "Ne pas commencer Lord seul.",
+                            "Ne pas quitter la zone.",
+                            "Ne pas laisser le Marksman sans protection."
+                        ],
+                        positions: [
+                            "Devant le Lord.",
+                            "Entre les ennemis et les alliés.",
+                            "Dans les buissons proches."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "10:00–Fin",
+                title: "Fin de partie",
+                items: [
+                    {
+                        actions: [
+                            "Engager les combats décisifs.",
+                            "Protéger le Marksman jusqu'à la fin.",
+                            "Bloquer les Assassins ennemis.",
+                            "Créer de l'espace pour l'équipe.",
+                            "Aider à détruire les tours et le Nexus."
+                        ],
+                        toAvoids: [
+                            "Ne pas partir seul.",
+                            "Ne pas poursuivre un ennemi jusqu'à la base.",
+                            "Ne pas laisser les héros fragiles sans protection."
+                        ],
+                        positions: [
+                            "Toujours en première ligne.",
+                            "Devant le Frontline allié.",
+                            "Entre les ennemis et la Backline alliée."
+                        ]
+                    }
+                ]
+            }
         ]
-      },
-      {
-        time: "00:20–01:30",
-        title: "Protection du Jungler",
-        items: [
-          {
-            actions: [
-              "Aider à sécuriser le premier buff.",
-              "Contrôler les buissons.",
-              "Donner la vision autour de la rivière.",
-              "Aider le Mid Lane après le premier buff."
-            ],
-            toAvoids: [
-              "Ne pas quitter le Jungler trop tôt.",
-              "Ne pas poursuivre un ennemi.",
-              "Ne pas gaspiller les compétences."
-            ],
-            positions: [
-              "Toujours devant les alliés.",
-              "Dans les buissons importants.",
-              "À l'entrée de la rivière."
-            ]
-          }
+    },
+    {
+        name: "Bruno",
+        role: "Gold Lane",
+        goal: "MVP, Maniac, Victory",
+        color: "#f57c00",
+        steps: [
+            {
+                time: "00:00–01:00",
+                title: "Farm",
+                items: [
+                    {
+                        actions: [
+                            "Acheter l'équipement recommandé.",
+                            "Débloquer la Compétence 1.",
+                            "Faire tous les derniers coups.",
+                            "Ramasser chaque ballon après une attaque.",
+                            "Regarder la mini-carte."
+                        ],
+                        toAvoids: [
+                            "Ne pas combattre trop tôt.",
+                            "Ne pas pousser sans vision.",
+                            "Ne pas quitter la Gold Lane."
+                        ],
+                        positions: [
+                            "Derrière les sbires.",
+                            "Près de la tour."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "01:00–03:00",
+                title: "Avantage",
+                items: [
+                    {
+                        actions: [
+                            "Harceler avec la Compétence 1.",
+                            "Prendre le Gold Crab.",
+                            "Aider la Turtle si possible.",
+                            "Détruire la première tour."
+                        ],
+                        toAvoids: [
+                            "Ne pas poursuivre un ennemi.",
+                            "Ne pas mourir pour un kill.",
+                            "Ne pas ignorer le farm."
+                        ],
+                        positions: [
+                            "Toujours derrière le Tank.",
+                            "À portée maximale."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "03:00–06:00",
+                title: "Rotation",
+                items: [
+                    {
+                        actions: [
+                            "Changer de lane après la première tour.",
+                            "Farmer entre chaque combat.",
+                            "Aider Mid Lane.",
+                            "Participer aux objectifs."
+                        ],
+                        toAvoids: [
+                            "Ne pas marcher seul.",
+                            "Ne pas entrer dans les buissons.",
+                            "Ne pas oublier les sbires."
+                        ],
+                        positions: [
+                            "Suivre le Tank.",
+                            "Rester en Backline."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "06:00–10:00",
+                title: "Team Fight",
+                items: [
+                    {
+                        actions: [
+                            "Attendre que le Tank engage.",
+                            "Viser Marksman puis Mage.",
+                            "Ramasser chaque ballon.",
+                            "Utiliser l'Ultime sur plusieurs ennemis.",
+                            "Se déplacer entre chaque attaque."
+                        ],
+                        toAvoids: [
+                            "Ne pas attaquer le Tank en premier.",
+                            "Ne pas rester immobile.",
+                            "Ne pas utiliser Flicker offensivement."
+                        ],
+                        positions: [
+                            "Toujours derrière les alliés.",
+                            "À distance maximale."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "10:00–Fin",
+                title: "Victoire",
+                items: [
+                    {
+                        actions: [
+                            "Participer au Lord.",
+                            "Pousser les tours.",
+                            "Attaquer le Nexus.",
+                            "Rester vivant.",
+                            "Jouer avec l'équipe."
+                        ],
+                        toAvoids: [
+                            "Ne pas courir après les kills.",
+                            "Ne pas Split Push seul.",
+                            "Ne pas mourir avant Lord."
+                        ],
+                        positions: [
+                            "Derrière le Frontline.",
+                            "Près du Tank."
+                        ]
+                    }
+                ]
+            }
         ]
-      },
-      {
-        time: "01:30–02:30",
-        title: "Première Turtle",
-        items: [
-          {
-            actions: [
-              "Donner la vision autour de la Turtle.",
-              "Bloquer les ennemis qui approchent.",
-              "Utiliser la Compétence 2 pour attirer les ennemis.",
-              "Protéger le Jungler jusqu'à la fin de l'objectif."
-            ],
-            toAvoids: [
-              "Ne pas attaquer la Turtle à la place du Jungler.",
-              "Ne pas quitter la zone.",
-              "Ne pas poursuivre les ennemis loin."
-            ],
-            positions: [
-              "Entre les ennemis et le Jungler.",
-              "Dans les buissons proches de la Turtle.",
-              "Devant toute l'équipe."
-            ]
-          }
-        ]
-      },
-      {
-        time: "02:30–05:00",
-        title: "Rotation",
-        items: [
-          {
-            actions: [
-              "Alterner entre Gold Lane et Mid Lane.",
-              "Protéger le Marksman pendant son farm.",
-              "Donner la vision avant chaque rotation.",
-              "Créer des opportunités de gank."
-            ],
-            toAvoids: [
-              "Ne pas rester longtemps sur une seule lane.",
-              "Ne pas voler les éliminations.",
-              "Ne pas oublier les objectifs."
-            ],
-            positions: [
-              "Toujours devant le Marksman.",
-              "Dans les buissons avant les alliés.",
-              "Entre les ennemis et les héros fragiles."
-            ]
-          }
-        ]
-      },
-      {
-        time: "05:00–08:00",
-        title: "Team Fight",
-        items: [
-          {
-            actions: [
-              "Engager le combat avec l'Ultime.",
-              "Immobiliser plusieurs ennemis.",
-              "Protéger le Marksman et le Mage.",
-              "Absorber le maximum de dégâts.",
-              "Utiliser la Compétence 2 dès qu'elle est disponible."
-            ],
-            toAvoids: [
-              "Ne pas poursuivre un ennemi faible.",
-              "Ne pas abandonner la Backline.",
-              "Ne pas utiliser l'Ultime sur une seule cible sans raison."
-            ],
-            positions: [
-              "Première ligne.",
-              "Au centre du combat.",
-              "Toujours devant les alliés."
-            ]
-          }
-        ]
-      },
-      {
-        time: "08:00–10:00",
-        title: "Lord",
-        items: [
-          {
-            actions: [
-              "Contrôler tous les buissons autour du Lord.",
-              "Empêcher le Jungler ennemi d'approcher.",
-              "Protéger le Jungler allié.",
-              "Engager uniquement si l'équipe est prête.",
-              "Utiliser l'Ultime sur plusieurs ennemis."
-            ],
-            toAvoids: [
-              "Ne pas commencer Lord seul.",
-              "Ne pas quitter la zone.",
-              "Ne pas laisser le Marksman sans protection."
-            ],
-            positions: [
-              "Devant le Lord.",
-              "Entre les ennemis et les alliés.",
-              "Dans les buissons proches."
-            ]
-          }
-        ]
-      },
-      {
-        time: "10:00–Fin",
-        title: "Fin de partie",
-        items: [
-          {
-            actions: [
-              "Engager les combats décisifs.",
-              "Protéger le Marksman jusqu'à la fin.",
-              "Bloquer les Assassins ennemis.",
-              "Créer de l'espace pour l'équipe.",
-              "Aider à détruire les tours et le Nexus."
-            ],
-            toAvoids: [
-              "Ne pas partir seul.",
-              "Ne pas poursuivre un ennemi jusqu'à la base.",
-              "Ne pas laisser les héros fragiles sans protection."
-            ],
-            positions: [
-              "Toujours en première ligne.",
-              "Devant le Frontline allié.",
-              "Entre les ennemis et la Backline alliée."
-            ]
-          }
-        ]
-      }
-    ]
-  }
+    }
 ];
 
 // https://chatgpt.com/c/6a5647d3-5d68-83ec-ba60-b76577cb32e9
