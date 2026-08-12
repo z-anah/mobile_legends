@@ -1062,6 +1062,258 @@ window.heroesData = [
                 ]
             }
         ]
+    },
+    {
+        name: "Miya",
+        role: "Gold Lane",
+        goal: "MVP, Maniac, Victory",
+        color: "#1565c0",
+        steps: [
+            {
+                time: "00:00–01:00",
+                title: "Farm",
+                items: [
+                    {
+                        actions: [
+                            "Acheter l'équipement recommandé.",
+                            "Débloquer la Compétence 1.",
+                            "Faire tous les derniers coups.",
+                            "Activer la Compétence 1 pour nettoyer rapidement.",
+                            "Regarder la mini-carte."
+                        ],
+                        toAvoids: [
+                            "Ne pas combattre au niveau 1.",
+                            "Ne pas pousser sans vision.",
+                            "Ne pas quitter la Gold Lane."
+                        ],
+                        positions: [
+                            "Derrière les sbires.",
+                            "Près de la tour."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "01:00–03:00",
+                title: "Prendre l'avantage",
+                items: [
+                    {
+                        actions: [
+                            "Harceler avec les attaques de base.",
+                            "Prendre le Gold Crab.",
+                            "Aider la Turtle si possible.",
+                            "Détruire la première tour.",
+                            "Continuer à farmer."
+                        ],
+                        toAvoids: [
+                            "Ne pas poursuivre un ennemi.",
+                            "Ne pas mourir pour un kill.",
+                            "Ne pas ignorer les vagues."
+                        ],
+                        positions: [
+                            "Toujours derrière le Tank.",
+                            "À portée maximale."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "03:00–06:00",
+                title: "Rotation",
+                items: [
+                    {
+                        actions: [
+                            "Changer de lane après la première tour.",
+                            "Farmer entre chaque combat.",
+                            "Aider Mid Lane.",
+                            "Participer à Turtle."
+                        ],
+                        toAvoids: [
+                            "Ne pas marcher seul.",
+                            "Ne pas entrer dans les buissons.",
+                            "Ne pas oublier les objectifs."
+                        ],
+                        positions: [
+                            "Suivre le Tank.",
+                            "Rester en Backline."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "06:00–10:00",
+                title: "Team Fight",
+                items: [
+                    {
+                        actions: [
+                            "Attendre que le Tank engage.",
+                            "Activer la Compétence 1.",
+                            "Viser Marksman puis Mage.",
+                            "Utiliser l'Ultime pour devenir invisible et se repositionner.",
+                            "Se déplacer entre chaque attaque."
+                        ],
+                        toAvoids: [
+                            "Ne pas attaquer le Tank en premier.",
+                            "Ne pas rester immobile.",
+                            "Ne pas utiliser l'Ultime trop tôt."
+                        ],
+                        positions: [
+                            "Toujours derrière les alliés.",
+                            "À distance maximale."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "10:00–Fin",
+                title: "Maniac",
+                items: [
+                    {
+                        actions: [
+                            "Participer au Lord.",
+                            "Éliminer rapidement Marksman et Mage.",
+                            "Activer l'Ultime pour poursuivre ou fuir.",
+                            "Pousser les tours.",
+                            "Attaquer le Nexus."
+                        ],
+                        toAvoids: [
+                            "Ne pas courir après les kills.",
+                            "Ne pas Split Push seul.",
+                            "Ne pas mourir avant Lord."
+                        ],
+                        positions: [
+                            "Derrière le Frontline.",
+                            "Près du Tank."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Barats",
+        role: "Jungle",
+        goal: "MVP, Maniac, Victory",
+        color: "#4e342e",
+        steps: [
+            {
+                time: "00:00–01:30",
+                title: "Farm Jungle",
+                items: [
+                    {
+                        actions: [
+                            "Acheter l'équipement Jungle.",
+                            "Débloquer la Compétence 2.",
+                            "Prendre le Buff Bleu puis Rouge.",
+                            "Garder les stacks du passif au maximum.",
+                            "Atteindre rapidement le niveau 4."
+                        ],
+                        toAvoids: [
+                            "Ne pas gank avant le niveau 4.",
+                            "Ne pas perdre les stacks.",
+                            "Ne pas poursuivre inutilement."
+                        ],
+                        positions: [
+                            "Dans la jungle.",
+                            "Près du Jungler allié si invasion."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "01:30–03:00",
+                title: "Premiers Ganks",
+                items: [
+                    {
+                        actions: [
+                            "Sécuriser la Turtle.",
+                            "Gank Gold Lane.",
+                            "Utiliser la Compétence 2 pour ralentir.",
+                            "Utiliser l'Ultime pour isoler une cible."
+                        ],
+                        toAvoids: [
+                            "Ne pas attaquer sous la tour.",
+                            "Ne pas oublier le farm.",
+                            "Ne pas utiliser l'Ultime sur le Tank."
+                        ],
+                        positions: [
+                            "Devant l'équipe.",
+                            "Entrer par le côté."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "03:00–06:00",
+                title: "Domination",
+                items: [
+                    {
+                        actions: [
+                            "Farmer entre chaque combat.",
+                            "Prendre toutes les Turtle.",
+                            "Engager les combats.",
+                            "Protéger le Marksman."
+                        ],
+                        toAvoids: [
+                            "Ne pas rester seul.",
+                            "Ne pas ignorer les objectifs.",
+                            "Ne pas chasser les survivants."
+                        ],
+                        positions: [
+                            "Première ligne.",
+                            "Au centre du combat."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "06:00–10:00",
+                title: "Team Fight",
+                items: [
+                    {
+                        actions: [
+                            "Engager avec la Compétence 2.",
+                            "Avaler le Marksman ou le Mage avec l'Ultime.",
+                            "Bloquer les dégâts pour l'équipe.",
+                            "Continuer à garder les stacks."
+                        ],
+                        toAvoids: [
+                            "Ne pas viser le Tank.",
+                            "Ne pas entrer sans équipe.",
+                            "Ne pas perdre les stacks."
+                        ],
+                        positions: [
+                            "Devant tous les alliés.",
+                            "Collé aux ennemis."
+                        ]
+                    }
+                ]
+            },
+            {
+                time: "10:00–Fin",
+                title: "Victoire",
+                items: [
+                    {
+                        actions: [
+                            "Sécuriser le Lord.",
+                            "Engager les derniers combats.",
+                            "Éliminer le Carry ennemi.",
+                            "Pousser les tours.",
+                            "Détruire le Nexus."
+                        ],
+                        toAvoids: [
+                            "Ne pas mourir avant Lord.",
+                            "Ne pas Split Push seul.",
+                            "Ne pas quitter l'équipe."
+                        ],
+                        positions: [
+                            "Première ligne.",
+                            "Devant le Lord."
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ];
 
